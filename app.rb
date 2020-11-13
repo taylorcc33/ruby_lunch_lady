@@ -3,10 +3,18 @@
 # lunch lady repeats order
 # lunch lady totals item prices and displays the total
 require_relative "menu.rb"
+require_relative "customer.rb"
 
-# Welcome message
+
+
+# Welcome message and customer set up
 puts "Welcome to the Ruby Diner"
-puts ""
+puts "What's your name?"
+name_input = gets.strip
+customer = Customer.new(name_input)
+
+puts "Welcome #{customer.name}. It looks like you have $#{customer.wallet}."
+
 
 # Menu variables
 main_dishes = {
@@ -26,4 +34,3 @@ side_menu = Menu.new(side_dishes)
 # Run Main Menu
 main_menu.display_menu
 main_selection = main_menu.get_selection
-puts main_selection

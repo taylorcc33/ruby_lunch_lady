@@ -20,7 +20,16 @@ class Menu
   def get_selection
     input = gets.strip
     selection = Integer(input)
-  end
 
-  
+    if (selection >= 1 && selection <= @menu[:options].size)
+      return selection
+    else
+      puts "Your choice needs to be between 1 and #{@menu[:options].size}, please try again"
+      self.get_selection
+    end
+
+    rescue ArgumentError
+      puts "Your choice is not an integer. Please input an integer."
+      self.get_selection
+  end
 end

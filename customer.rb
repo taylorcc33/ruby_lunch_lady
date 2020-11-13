@@ -6,8 +6,5 @@ class Customer
     @wallet = wallet
     @basket = basket
   end
-
-
-
  
 end

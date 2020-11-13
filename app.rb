@@ -67,6 +67,7 @@ puts side_selection1.keys
 puts side_selection2.keys
 puts ""
 puts "Your order total is $#{main_selection_price + side_selection_price1 + side_selection_price2}"
+puts "You have $#{customer.wallet} left in your wallet."
 
 
 

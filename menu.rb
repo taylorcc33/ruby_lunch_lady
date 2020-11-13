@@ -3,7 +3,6 @@ class Menu
     @menu = menu
   end
 
-
   def display_menu
     puts @menu[:message]
 
@@ -22,8 +21,6 @@ class Menu
     end
   end
 
-
-
   def get_selection
     input = gets.strip
     selection = Integer(input)
@@ -40,9 +37,5 @@ class Menu
       puts "Your choice is not an integer. Please input an integer."
       self.get_selection
   end
-
-
-
-
 
 end
